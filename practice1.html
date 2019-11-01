@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>You don't know javascript</h1>
+    <script>
+        var costOfPhone, taxRate, totalCost, isTaxed;
+
+        costOfPhone = Number(prompt("How much does the phone cost? "))
+        isTaxed = prompt("Is it taxed? ");
+        
+        if (isTaxed.toLowerCase() !== "yes") {
+            taxRate = Number(prompt("What is the rate in %: "))
+            totalCost = (taxRate * 0.01 * costOfPhone) + costOfPhone;
+        } else {
+            totalCost = costOfPhone;
+        }
+
+        console.log("The cost of the phone is " + String(totalCost))
+    </script>
+</body>
+
+</html>
