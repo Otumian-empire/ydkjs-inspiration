@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Guess game</h1>
+    <script>
+        // get a fixed number
+        var secretNumber = Math.ceil(Math.random() % 10)
+
+        // ask the user to guess the number
+        var userGuess = Number(prompt("Guess the secret number: "))
+
+        // if the user input is lesser than the fixed number,
+        if (userGuess < secretNumber) {
+            // prompt the user that the input is less than the fixed
+            console.log("Your guess is lesser than the secret number")
+        }
+
+        // if the user input is greater than fixed numner,
+        else if (userGuess > secretNumber) {
+            // prompt the user that the input is greater than the fixd number
+            console.log("Your guess is greater than the secret number")
+        }
+
+        // if the input is the same, congratulate the user and then quit the game
+        else if (userGuess == secretNumber) {
+            console.log("Congratulations, the secret number is really " + secretNumber)
+        }
+
+    </script>
+
+</body>
+
+</html>
