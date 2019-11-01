@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>YDKJS</h1>
+    <script>
+        // NS_ERROR_XPC_SECURITY_MANAGER_VETO: 
+        var numberOfCats = Number(prompt("Enter the number of cats: "))
+        var numberOfDogs = Number(prompt("Enter the number of dogs: "))
+        var totalNumberOfPets = numberOfCats + numberOfDogs
+
+        console.log("There are " + numberOfCats + " of cats")
+        console.log("There are " + numberOfDogs + " of dogs")
+        console.log("There are " + totalNumberOfPets + " total number of pets")
+
+        if (totalNumberOfPets > 5) {
+            console.log("What the heck man! Get a life")
+        } else {
+            console.log("You better get some more pets and show some good love man!")
+        }
+        
+    </script>
+</body>
+
+</html>
