@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>practice 2 - objects</h1>
+    <script>
+        var obj = {
+            name: "John Doe",
+            age: 34,
+            hobby: "sleeping during the day"
+        };
+
+        console.log("Name: " + obj['name'] + "\nAge: " + obj['age'] + "\nHobby: " + obj['hobby'])
+
+        var arr = [
+            "Jonny Asuna", 35, "ghetto rat"
+        ];
+
+        console.log("Name: " + arr[0] + "\nage: " + arr[1] + "\nhobby: " + arr[2])
+
+        function sayName(name) {
+            console.log("Name: " + name + "\n")
+        }
+
+        sayName("Danny Chang")
+        sayName(arr[0])
+        sayName(obj['name'])
+
+        function $dallasedFunc(amount) {
+            $total = amount + 1200;
+            return $total;
+        }
+
+        console.log("The total is " + $dallasedFunc(12000));
+
+        /**
+         * returns a random alphanumeric characters, given the length of the data desired.
+         * this random token generator function is provided by Scott.
+         * source: https://stackoverflow.com/a/13733588/4592338
+          */
+        function generate_token() {
+            // this is actually a php function
+            // define('TOKENLENGTH', 6); // php
+            const TOKENLENGTH = 6 // js
+
+            $token = "";
+
+            // $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            // $codeAlphabet .= "abcdefghijklmnopqrstuvwxyz";
+            // $codeAlphabet .= "0123456789";
+
+            $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            $codeAlphabet += "abcdefghijklmnopqrstuvwxyz";
+            $codeAlphabet += "0123456789";
+
+            // $max = strlen($codeAlphabet); // php
+            // $max = $codeAlphabet.length // js
+
+            for ($i = 0; $i < TOKENLENGTH; $i++) {
+                // $token += $codeAlphabet[random_int(0, $max - 1)];
+                $token += $codeAlphabet[Math.ceil((Math.random() * 10) % 10)];
+            }
+
+            return $token;
+        }
+
+        console.log(generate_token())
+
+    </script>
+</body>
+
+</html>
